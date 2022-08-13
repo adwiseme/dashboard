@@ -43,11 +43,4 @@ banner: icons
 {% endcapture %}
 {% include example.html code=code %}
 
-## Icon animations
 
-{% capture code %}
-  {% include ui/icon.html icon="heart" class="icon-pulse" %}
-  {% include ui/icon.html icon="bell" class="icon-tada" %}
-  {% include ui/icon.html icon="rotate-clockwise" class="icon-rotate" %}
-{% endcapture %}
-{% include example.html code=code %}

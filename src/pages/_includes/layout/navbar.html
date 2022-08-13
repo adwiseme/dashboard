@@ -20,7 +20,7 @@
 				{% if include.hide-search %}
 					{% include layout/navbar-menu.html sample=include.sample hide-icons=include.hide-icons %}
 				{% elsif include.hide-menu %}
-					{% include layout/navbar-search.html rounded=include.transparent dark=include.dark %}
+
 				{% else %}
 					<div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
 						{% include layout/navbar-menu.html sample=include.sample hide-icons=include.hide-icons %}
@@ -30,8 +30,6 @@
 							{% unless include.fluid-search %}
 								{% assign search-class = search-class | append: " flex-md-grow-0" %}
 							{% endunless %}
-
-							{% include layout/navbar-search.html breakpoint=breakpoint rounded=include.transparent class=search-class dark=include.dark %}
 						{% endunless %}
 					</div>
 				{% endif %}
@@ -46,7 +44,6 @@
 			<div class="navbar {% if include.dark-secondary %}navbar-dark{% else %}navbar-light{% endif %}">
 				<div class="container-xl">
 					{% include layout/navbar-menu.html sample=include.sample hide-icons=include.hide-icons long-titles=true %}
-					{% include layout/navbar-search.html breakpoint=breakpoint dark=include.dark-secondary class="my-2 my-md-0 flex-grow-1 flex-md-grow-0 order-first order-md-last" %}
 				</div>
 			</div>
 		</div>

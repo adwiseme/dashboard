@@ -1,14 +1,14 @@
 <div class="card">
 	<div class="card-header border-0">
-		<div class="card-title">Development activity</div>
+		<div class="card-title">Dzisiejsze transakcje</div>
 	</div>
 	<div class="position-relative">
 		<div class="position-absolute top-0 left-0 px-3 mt-1 w-75">
 			<div class="row g-2">
 				<div class="col-auto">{% include ui/chart-sparkline.html id="activity" percentage=35 type="donut" %}</div>
 				<div class="col">
-					<div>Today's Earning: $4,262.40</div>
-					<div class="text-muted">{% include ui/icon.html icon="trending-up" color="green" class="icon-inline" %} +5% more than yesterday</div>
+					<div>Dzisiejsze zarobki: 723,40 zł</div>
+					<div class="text-muted">{% include ui/icon.html icon="trending-up" color="green" class="icon-inline" %} +5% więcej niż wczoraj</div>
 				</div>
 			</div>
 		</div>
@@ -19,9 +19,9 @@
 		<table class="table table-vcenter">
 			<thead>
 			<tr>
-				<th>User</th>
-				<th>Commit</th>
-				<th>Date</th>
+				<th>Klient</th>
+				<th>Data</th>
+				<th>Wartość</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -31,11 +31,11 @@
 					{% include ui/avatar.html person-id=forloop.index size="sm" %}
 				</td>
 				<td class="td-truncate">
-					<div class="text-truncate">
-						{{ commit.description }}
-					</div>
+					{{ commit.date | date_to_string }}
 				</td>
-				<td class="text-nowrap text-muted">{{ commit.date | date_to_string }}</td>
+				<td class="text-nowrap text-muted">
+					{{ commit.description }}
+				</td>
 			</tr>
 			{% endfor %}
 			</tbody>

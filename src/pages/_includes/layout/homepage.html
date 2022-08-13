@@ -16,16 +16,16 @@
 	<div class="col-12">
 		<div class="row row-cards">
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html color="blue" icon="currency-dollar" title="132 Sales" description="12 waiting payments" %}
+				{% include cards/small-stats.html color="blue" icon="currency-dollar" title="132 Transakcje" description="12 oczekuje na potwierdzenie" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html color="green" icon="shopping-cart" title="78 Orders" description="32 shipped" %}
+				{% include cards/small-stats.html color="pink" icon="share" title="78 Poleceń" description="69 zaakceptowanych" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html icon="brand-twitter" color="twitter" title="623 Shares" description="16 today" %}
+				{% include cards/small-stats.html icon="brand-twitter" color="twitter" title="13 Wzmianek" description="5 dziś" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html icon="brand-facebook" color="facebook" title="132 Likes" description="21 today" %}
+				{% include cards/small-stats.html icon="brand-facebook" color="facebook" title="17 Wzmianek" description="7 dziś" %}
 			</div>
 		</div>
 	</div>
@@ -33,14 +33,14 @@
 	<div class="col-lg-6">
 		<div class="card">
 			<div class="card-body">
-				<h3 class="card-title">Traffic summary</h3>
+				<h3 class="card-title">Transakcje</h3>
 				{% include ui/chart.html chart-id="mentions" size="lg" legend=true %}
 			</div>
 		</div>
 	</div>
 
 	<div class="col-lg-6">
-		{% include cards/map-vector.html title="Locations" %}
+		{% include polecam/pandl.html %}
 	</div>
 
 	{% comment %}
@@ -67,61 +67,46 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
-						<p class="mb-3">Using Storage <strong>6854.45 MB </strong>of 8 GB</p>
+						<p class="mb-3">Przychód <strong>2 700,00 zł</strong> z 31 poleceń</p>
 						<div class="progress progress-separated mb-3">
-							<div class="progress-bar bg-primary" role="progressbar" style="width: 44%" aria-label="Regular"></div>
+							<div class="progress-bar bg-primary" role="progressbar" style="width: 67%" aria-label="Regular"></div>
 							<div class="progress-bar bg-info" role="progressbar" style="width: 19%" aria-label="System"></div>
 							<div class="progress-bar bg-success" role="progressbar" style="width: 9%" aria-label="Shared"></div>
 						</div>
 						<div class="row">
 							<div class="col-auto d-flex align-items-center pe-2">
 								<span class="legend me-2 bg-primary"></span>
-								<span>Regular</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">915MB</span>
+								<span>Przychód</span>
+								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">2700 zł</span>
 							</div>
 							<div class="col-auto d-flex align-items-center px-2">
 								<span class="legend me-2 bg-info"></span>
-								<span>System</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">415MB</span>
+								<span>Premia</span>
+								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">500 zł</span>
 							</div>
 							<div class="col-auto d-flex align-items-center px-2">
 								<span class="legend me-2 bg-success"></span>
-								<span>Shared</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">201MB</span>
+								<span>Promotorzy</span>
+								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">300 zł</span>
 							</div>
 							<div class="col-auto d-flex align-items-center ps-2">
 								<span class="legend me-2"></span>
-								<span>Free</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">612MB</span>
+								<span>Polec.am</span>
+								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">100 zł</span>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-12">
-				{% include cards/activity.html %}
-			</div>
+		</div>
+		<div class="col-lg-6">
+			{% include polecam/notifications.html %}
 		</div>
 	</div>
+	
 
 	<div class="col-lg-6">
 		{% include cards/development-activity.html %}
-	</div>
-
-	<div class="col-12">
-		{% include cards/icons-banner.html %}
-	</div>
-
-	<div class="col-md-12 col-lg-8">
-		{% include cards/most-visited-pages.html %}
-	</div>
-
-	<div class="col-md-6 col-lg-4">
-		{% include cards/sponsor.html %}
-	</div>
-
-	<div class="col-md-6 col-lg-4">
-		{% include cards/social-traffic.html %}
 	</div>
 
 	<div class="col-md-12 col-lg-8">

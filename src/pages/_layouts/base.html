@@ -14,6 +14,10 @@
 	<title>{% if title %}{{ title }} - {% endif %}{% if site.title %}{{ site.title }} - {% endif %}{{ site.description }}</title>
 
 	{% if jekyll.environment == 'preview' %}
+		<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+		<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
 		<meta name="msapplication-TileColor" content="{{ site.data.colors.blue }}"/>
 		<meta name="theme-color" content="{{ site.data.colors.blue }}"/>
 
@@ -30,13 +34,6 @@
 
 		{% include layout/og.html %}
 	{% endif %}
-
-	<style>
-		@import url('https://rsms.me/inter/inter.css');
-		:root {
-			--tblr-font-sans-serif: Inter,-apple-system,BlinkMacSystemFont,San Francisco,Segoe UI,Roboto,Helvetica Neue,sans-serif !important;
-		}
-	</style>
 
 	{% include layout/css.html %}
 </head>
