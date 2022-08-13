@@ -40,7 +40,7 @@
 	</div>
 
 	<div class="col-lg-6">
-		{% include polecam/pandl.html %}
+		{% include polecam/pandl-chart.html %}
 	</div>
 
 	{% comment %}
@@ -63,53 +63,19 @@
 	{% endcomment %}
 
 	<div class="col-lg-6">
-		<div class="row row-cards">
-			<div class="col-12">
-				<div class="card">
-					<div class="card-body">
-						<p class="mb-3">Przychód <strong>2 700,00 zł</strong> z 31 poleceń</p>
-						<div class="progress progress-separated mb-3">
-							<div class="progress-bar bg-primary" role="progressbar" style="width: 67%" aria-label="Regular"></div>
-							<div class="progress-bar bg-info" role="progressbar" style="width: 19%" aria-label="System"></div>
-							<div class="progress-bar bg-success" role="progressbar" style="width: 9%" aria-label="Shared"></div>
-						</div>
-						<div class="row">
-							<div class="col-auto d-flex align-items-center pe-2">
-								<span class="legend me-2 bg-primary"></span>
-								<span>Przychód</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">2700 zł</span>
-							</div>
-							<div class="col-auto d-flex align-items-center px-2">
-								<span class="legend me-2 bg-info"></span>
-								<span>Premia</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">500 zł</span>
-							</div>
-							<div class="col-auto d-flex align-items-center px-2">
-								<span class="legend me-2 bg-success"></span>
-								<span>Promotorzy</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">300 zł</span>
-							</div>
-							<div class="col-auto d-flex align-items-center ps-2">
-								<span class="legend me-2"></span>
-								<span>Polec.am</span>
-								<span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">100 zł</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-lg-6">
-			{% include polecam/notifications.html %}
-		</div>
+		{% include polecam/pandl-ratio.html %}
 	</div>
-	
+
+	<div class="col-lg-6">
+		{% include polecam/notifications.html %}
+	</div>
+
 
 	<div class="col-lg-6">
 		{% include cards/development-activity.html %}
 	</div>
 
-	<div class="col-md-12 col-lg-8">
+	<div class="col-md-6 col-lg-6">
 		{% include cards/tasks.html %}
 	</div>
 
