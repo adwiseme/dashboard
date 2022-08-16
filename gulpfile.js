@@ -285,6 +285,10 @@ gulp.task('js-demo', () => {
 	return compileJs('demo')
 })
 
+gulp.task('js-api', () => {
+	return compileJs('api')
+})
+
 /**
  * Compile JS module files to dist directory
  */
@@ -416,7 +420,7 @@ gulp.task('build-critical', (cb) => {
  */
 gulp.task('watch', (cb) => {
 	gulp.watch('./src/scss/**/*.scss', gulp.series('sass'))
-	gulp.watch('./src/js/**/*.js', gulp.parallel('js', 'mjs', 'js-demo'))
+	gulp.watch('./src/js/**/*.js', gulp.parallel('js', 'mjs', 'js-demo', 'js-api'))
 	cb()
 })
 
@@ -516,8 +520,8 @@ gulp.task('add-banner', () => {
 
 gulp.task('clean', gulp.series('clean-dirs', 'clean-jekyll'))
 
-gulp.task('start', gulp.series('clean', 'sass', 'js', 'js-demo', 'mjs', 'build-jekyll', gulp.parallel('watch-jekyll', 'watch', 'browser-sync')))
+gulp.task('start', gulp.series('clean', 'sass', 'js', 'js-demo', 'js-api', 'mjs', 'build-jekyll', gulp.parallel('watch-jekyll', 'watch', 'browser-sync')))
 
-gulp.task('build-core', gulp.series('build-on', 'clean', 'sass', 'css-rtl', 'css-minify', 'js', 'js-demo', 'mjs', 'copy-images', 'copy-libs', 'add-banner'))
+gulp.task('build-core', gulp.series('build-on', 'clean', 'sass', 'css-rtl', 'css-minify', 'js', 'js-demo', 'js-api', 'mjs', 'copy-images', 'copy-libs', 'add-banner'))
 gulp.task('build-demo', gulp.series('build-on', 'build-jekyll', 'copy-static', 'copy-dist', 'build-cleanup', 'build-purgecss'/*, 'build-critical'*/))
 gulp.task('build', gulp.series('build-core', 'build-demo'))

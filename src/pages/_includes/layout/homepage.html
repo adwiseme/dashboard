@@ -1,5 +1,5 @@
 <div class="row row-deck row-cards">
-	
+
 	<div class="col-sm-6 col-lg-3">
 		{% include polecam/cards/profit.html %}
 	</div>
@@ -85,4 +85,12 @@
 	<div class="col-12">
 		{% include cards/invoices.html %}
 	</div>
+</div>
+
+<div id="app-vue">
+	<ul v-if="loaded">
+		<li v-for="(item, index) in cards.data.allCards.edges">
+			${ index }$. ${ item.node.name }$ - ${ item.node.id }$
+		</li>
+	</ul>
 </div>

@@ -18,7 +18,7 @@
 
 <script src="{{ site.base }}/dist/js/tabler{% if jekyll.environment != 'development' %}.min{% endif %}.js{% if jekyll.environment == 'preview' %}?{{ site.time | date: '%s' }}{% endif %}" defer></script>
 <script src="{{ site.base }}/dist/js/demo{% if jekyll.environment != 'development' %}.min{% endif %}.js{% if jekyll.environment == 'preview' %}?{{ site.time | date: '%s' }}{% endif %}" defer></script>
-
+<script src="{{ site.base }}/dist/js/api{% if jekyll.environment != 'development' %}.min{% endif %}.js{% if jekyll.environment == 'preview' %}?{{ site.time | date: '%s' }}{% endif %}" defer></script>
 
 {% removeemptylines %}
 {% for script in site.captured_global.scripts %}
