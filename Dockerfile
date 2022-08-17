@@ -22,10 +22,7 @@ WORKDIR /app
 
 # install app in image
 ADD package.json /app/
-ADD package-lock.json /app/
-ADD package.json /app/
 ADD Gemfile /app/
-ADD Gemfile.lock /app/
 ADD _config.yml /app/
 ADD gulpfile.js /app/
 

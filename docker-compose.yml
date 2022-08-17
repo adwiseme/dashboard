@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+
+  dashboard:
+    restart: unless-stopped
+    build:
+      context: .
+    ports:
+      - 3000:3000
+      - 3001:3001
+    volumes:
+      - ./src:/app/src
+      - ./_config.yml:/app/_config.yml
