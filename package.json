@@ -109,7 +109,11 @@
   "dependencies": {
     "@popperjs/core": "^2.11.5",
     "@tabler/icons": "^1.78.1",
-    "bootstrap": "5.2.0"
+    "apollo-boost": "^0.4.9",
+    "bootstrap": "5.2.0",
+    "graphql": "^15.8.0",
+    "vue": "^3.2.37",
+    "vue-apollo": "^3.1.0"
   },
   "peerDependencies": {
     "apexcharts": "^3.35.4",

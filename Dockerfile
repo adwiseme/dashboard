@@ -36,4 +36,4 @@ EXPOSE 3000
 EXPOSE 3001
 
 # run tabler
-ENTRYPOINT [ "npm", "run", "start-plugins" ]
+ENTRYPOINT [ "npm", "run", "start" ]
