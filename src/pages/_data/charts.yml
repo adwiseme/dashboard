@@ -457,6 +457,20 @@ new-clients:
       color: gray-600
       data: [93, 54, 51, 24, 35, 35, 31, 67, 19, 43, 28, 36, 62, 61, 27, 39, 35, 41, 27, 35, 51, 46, 62, 37, 44, 53, 41, 65, 39, 37]
 
+transactions-value:
+  type: line
+  datetime: true
+  sparkline: true
+  stroke-width: [2, 1]
+  stroke-dash: [0, 3]
+  series:
+    - name: Obecny tydzień
+      color: blue
+      data: [145, 135, 144, 128, 139, 155, 165]
+    - name: Poprzedni tydzień
+      color: gray-600
+      data: [193, 154, 151, 124, 135, 135, 131]
+
 active-users:
   type: bar
   datetime: true
