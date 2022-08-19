@@ -7,7 +7,7 @@
 			</div>
 		</div>
 		<div class="d-flex align-items-baseline">
-			<div class="h1 mb-0 me-2" v-html="message">???</div>
+			<div class="h1 mb-0 me-2">3 578,00 zł</div>
 			<div class="me-auto">
 				{% include ui/trending.html value=8 %}
 			</div>
@@ -15,16 +15,3 @@
 	</div>
 	{% include ui/chart.html chart-id="revenue-bg" size="sm" %}
 </div>
-
-<script src="https://unpkg.com/vue@3"></script>
-<script>
-const { createApp } = Vue
-
-createApp({
-	data() {
-	return {
-		message: 'Hello Vue!'
-	}
-	}
-}).mount('#instap')
-</script>

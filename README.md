@@ -198,3 +198,38 @@ docker run -p 3000:3000 -p 3001:3001 -v $(pwd)/src:/app/src -v $(pwd)/_config.ym
 ```
 
 Now open your browser to [http://localhost:3000](http://localhost:3000). Edit anything in the `src/` folder and watch your browser refresh the page after it has been rebuilt.
+
+# VUE Example
+
+```html
+<div id="instap" class="card">
+	<div class="card-body">
+		<div class="d-flex align-items-center">
+			<div class="subheader">Przychód</div>
+			<div class="ms-auto lh-1">
+				{% include parts/dropdown/days.html %}
+			</div>
+		</div>
+		<div class="d-flex align-items-baseline">
+			<div class="h1 mb-0 me-2" v-html="message">???</div>
+			<div class="me-auto">
+				{% include ui/trending.html value=8 %}
+			</div>
+		</div>
+	</div>
+	{% include ui/chart.html chart-id="revenue-bg" size="sm" %}
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+const { createApp } = Vue
+
+createApp({
+	data() {
+	return {
+		message: 'Hello Vue!'
+	}
+	}
+}).mount('#instap')
+</script>
+```
