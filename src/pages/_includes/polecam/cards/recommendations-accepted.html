@@ -1,0 +1,16 @@
+<div class="card">
+	<div class="card-body">
+		<div class="d-flex align-items-center">
+			<div class="subheader">Skuteczne polecenia</div>
+			<div class="ms-auto lh-1">
+				{% include parts/dropdown/days.html %}
+			</div>
+		</div>
+		<div class="h1 mb-3">97%</div>
+		<div class="d-flex mb-2">
+			<div>Liczba poleceń zaakceptowanych</div>
+			<div class="ms-auto">{% include ui/trending.html value=1 %}</div>
+		</div>
+		{% include ui/progress.html value=97 color="blue" size="sm" %}
+	</div>
+</div>
