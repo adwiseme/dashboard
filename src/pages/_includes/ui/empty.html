@@ -11,9 +11,9 @@
 	{% endif %}
 
 
-	<p class="empty-title">{{ include.title | default: "No results found" }}</p>
+	<p class="empty-title">{{ include.title | default: "Brak kart" }}</p>
 	<p class="empty-subtitle text-muted">
-		{{ include.subtitle | default: "Try adjusting your search or filter to find what you're looking for." }}
+		{{ include.subtitle | default: "Nie masz jeszcze kart przypisanych do firm, którymi zarządzasz" }}
 	</p>
 	<div class="empty-action">
 		{% assign button-text = include.button-text | default: "Search again" %}

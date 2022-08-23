@@ -13,6 +13,7 @@ legal:
   title: Umowy
   icon: license
 
-extra:
+transactions:
+  url: polecam/transactions.html
   title: Transakcje
   icon: currency-dollar

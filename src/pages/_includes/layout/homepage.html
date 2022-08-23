@@ -1,42 +1,64 @@
 <div class="row row-deck row-cards">
 
-	<div class="col-sm-6 col-lg-3">
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/profit.html %}
 	</div>
 
-	<div class="col-sm-6 col-lg-3">
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/transactions-count.html %}
 	</div>
-	
-	<div class="col-sm-6 col-lg-3">
+
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/recommendations-count.html %}
 	</div>
 
-	<div class="col-sm-6 col-lg-3">
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/recommendations.html %}
 	</div>
 
-	<div class="col-sm-6 col-lg-3">
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/transactions-value.html %}
 	</div>
 
-	<div class="col-sm-6 col-lg-3">
+	<div class="col-sm-6 col-lg-4">
 		{% include polecam/cards/recommendations-accepted.html %}
+	</div>
+
+	<div class="col-lg-8">
+		{% include polecam/pandl-ratio.html %}
+	</div>
+
+	<div class="col-lg-4">
+		<div class="row row-cards">
+			<div class="col-sm-4">
+				{% include cards/small-stats-3.html number=43 title="New Tickets" percentage=6 %}
+			</div>
+			<div class="col-sm-4">
+				{% include cards/small-stats-3.html number=95 number-prefix="$" title="Daily Earnings" percentage=-2 %}
+			</div>
+			<div class="col-sm-4">
+				{% include cards/small-stats-3.html number=7 title="New Replies" percentage=9 %}
+			</div>
+		</div>
 	</div>
 
 	<div class="col-12">
 		<div class="row row-cards">
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html color="blue" icon="currency-dollar" title="132 Transakcje" description="12 oczekuje na potwierdzenie" %}
+				{% include cards/small-stats.html color="blue" icon="currency-dollar" title="132 Transakcje"
+				description="12 oczekuje" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html color="pink" icon="share" title="78 Poleceń" description="69 zaakceptowanych" %}
+				{% include cards/small-stats.html color="pink" icon="share" title="78 Poleceń" description="69
+				zaakceptowanych" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html icon="brand-twitter" color="twitter" title="13 Wzmianek" description="5 dziś" %}
+				{% include cards/small-stats.html icon="brand-twitter" color="twitter" title="13 Wzmianek"
+				description="5 dziś" %}
 			</div>
 			<div class="col-sm-6 col-lg-3">
-				{% include cards/small-stats.html icon="brand-facebook" color="facebook" title="17 Wzmianek" description="7 dziś" %}
+				{% include cards/small-stats.html icon="brand-facebook" color="facebook" title="17 Wzmianek"
+				description="7 dziś" %}
 			</div>
 		</div>
 	</div>
@@ -54,51 +76,7 @@
 		{% include polecam/pandl-chart.html %}
 	</div>
 
-	{% comment %}
-	<div class="col-lg-6">
-		<div class="row row-cards">
-			<div class="col-12">
-			</div>
-
-			<div class="col-sm-4">
-				{% include cards/small-stats-3.html number=43 title="New Tickets" percentage=6 %}
-			</div>
-			<div class="col-sm-4">
-				{% include cards/small-stats-3.html number=95 number-prefix="$" title="Daily Earnings" percentage=-2 %}
-			</div>
-			<div class="col-sm-4">
-				{% include cards/small-stats-3.html number=7 title="New Replies" percentage=9 %}
-			</div>
-		</div>
-	</div>
-	{% endcomment %}
-
-	<div class="col-lg-6">
-		{% include polecam/pandl-ratio.html %}
-	</div>
-
-	<div class="col-lg-6">
-		{% include polecam/notifications.html %}
-	</div>
-
-
-	<div class="col-lg-6">
-		{% include cards/development-activity.html %}
-	</div>
-
-	<div class="col-md-6 col-lg-6">
-		{% include cards/tasks.html %}
-	</div>
-
 	<div class="col-12">
 		{% include cards/invoices.html %}
 	</div>
-</div>
-
-<div id="app-vue">
-	<ul v-if="loaded">
-		<li v-for="(item, index) in cards.data.allCards.edges">
-			${ index }$. ${ item.node.name }$ - ${ item.node.id }$
-		</li>
-	</ul>
 </div>

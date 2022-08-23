@@ -1,39 +1,37 @@
 <div class="card">
 	<div class="card-header">
-		<h3 class="card-title">Invoices</h3>
+		<h3 class="card-title">Transakcje</h3>
 	</div>
 	<div class="card-body border-bottom py-3">
-
 		<div class="d-flex">
 			<div class="text-muted">
-				Show
+				Pokaż
 				<div class="mx-2 d-inline-block">
-					<input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Invoices count">
+					<input type="text" class="form-control form-control-sm" value="8" size="3" aria-label="Transakcji">
 				</div>
-				entries
+				transakcji na stronie
 			</div>
-
 			<div class="ms-auto text-muted">
-				Search:
+				Wyszukaj:
 				<div class="ms-2 d-inline-block">
 					<input type="text" class="form-control form-control-sm" aria-label="Search invoice">
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<div class="table-responsive">
 		<table class="table card-table table-vcenter text-nowrap datatable">
 			<thead>
 			<tr>
 				<th class="w-1"><input class="form-check-input m-0 align-middle" type="checkbox" aria-label="Select all invoices"></th>
-				<th class="w-1">No. {% include ui/icon.html icon="chevron-up" class="icon-sm text-dark icon-thick" %}</th>
-				<th>Invoice Subject</th>
-				<th>Client</th>
-				<th>VAT No.</th>
-				<th>Created</th>
+				<th class="w-1">Numer {% include ui/icon.html icon="chevron-up" class="icon-sm text-dark icon-thick" %}</th>
+				<th>Firma</th>
+				<th>Klient</th>
+				<th>POS</th>
+				<th>Data</th>
 				<th>Status</th>
-				<th>Price</th>
+				<th>Cena</th>
+				<th>Koszt</th>
 				<th></th>
 			</tr>
 			</thead>
@@ -58,20 +56,14 @@
 					<span class="badge bg-{{ invoice.status }} me-1"></span> {{ invoice.status-name }}
 				</td>
 				<td>{{ invoice.price }}</td>
-
-				<td class="text-end">
-					<span class="dropdown">
-						<button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">Actions</button>
-						{% include ui/dropdown-menu.html right=true %}
-					</span>
-				</td>
+				<td class="text-end">{{ invoice.discount }}</td>
 			</tr>
 			{% endfor %}
 			</tbody>
 		</table>
 	</div>
 	<div class="card-footer d-flex align-items-center">
-		<p class="m-0 text-muted">Showing <span>1</span> to <span>8</span> of <span>16</span> entries</p>
+		<p class="m-0 text-muted">Wyświetlanie od <span>1</span> do <span>8</span> z <span>16</span> transakcji</p>
 		{% include ui/pagination.html class="m-0 ms-auto" %}
 	</div>
 </div>
