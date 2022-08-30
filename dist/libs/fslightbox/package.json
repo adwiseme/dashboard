@@ -1,44 +1,40 @@
 {
-  "name": "fslightbox",
-  "version": "3.3.1",
-  "description": "Modern and easy plugin for displaying images and videos in clean overlaying box. Display single source or create beautiful gallery with powerful lightbox.",
-  "author": "Bantha Apps Piotr Zdziarski",
-  "license": "MIT",
-  "homepage": "https://fslightbox.com",
+  "_args": [
+    [
+      "fslightbox@3.3.1",
+      "/Users/rzepaw/dev/polecam/dashboard"
+    ]
+  ],
+  "_development": true,
+  "_from": "fslightbox@3.3.1",
+  "_id": "fslightbox@3.3.1",
+  "_inBundle": false,
+  "_integrity": "sha512-r8mS2lnqw+4F7fQmIXZ4Y+tulxqGsZyG7wzMhWKl8MHvVZRJnclUyt+n+hfTkUa+e1bvlzpw4tY/X9mwqC4wCg==",
+  "_location": "/fslightbox",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "fslightbox@3.3.1",
+    "name": "fslightbox",
+    "escapedName": "fslightbox",
+    "rawSpec": "3.3.1",
+    "saveSpec": null,
+    "fetchSpec": "3.3.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/fslightbox/-/fslightbox-3.3.1.tgz",
+  "_spec": "3.3.1",
+  "_where": "/Users/rzepaw/dev/polecam/dashboard",
+  "author": {
+    "name": "Bantha Apps Piotr Zdziarski"
+  },
   "bugs": {
     "url": "https://github.com/banthagroup/fslightbox/issues"
   },
-  "main": "index.js",
-  "keywords": [
-    "lightbox",
-    "slide gallery",
-    "image lightbox",
-    "slider",
-    "carousel"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/banthagroup/fslightbox"
-  },
-  "scripts": {
-    "test": "jest",
-    "production": "webpack --mode production --config webpack.prod.config.js --display-modules && gulp",
-    "watch": "webpack-dev-server  --mode development --host 0.0.0.0",
-    "cypress": "concurrently --kill-others \"webpack-dev-server --config ./webpack.cypress.config.js --mode development\" \"node ./node_modules/.bin/cypress open\""
-  },
-  "jest": {
-    "setupFiles": [
-      "./jest-setup.js"
-    ],
-    "verbose": true,
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/demo/",
-      "/dist/",
-      "/tests/cypress/"
-    ],
-    "collectCoverage": false
-  },
+  "description": "Modern and easy plugin for displaying images and videos in clean overlaying box. Display single source or create beautiful gallery with powerful lightbox.",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
@@ -68,5 +64,40 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1"
-  }
+  },
+  "homepage": "https://fslightbox.com",
+  "jest": {
+    "setupFiles": [
+      "./jest-setup.js"
+    ],
+    "verbose": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/demo/",
+      "/dist/",
+      "/tests/cypress/"
+    ],
+    "collectCoverage": false
+  },
+  "keywords": [
+    "lightbox",
+    "slide gallery",
+    "image lightbox",
+    "slider",
+    "carousel"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "fslightbox",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banthagroup/fslightbox.git"
+  },
+  "scripts": {
+    "cypress": "concurrently --kill-others \"webpack-dev-server --config ./webpack.cypress.config.js --mode development\" \"node ./node_modules/.bin/cypress open\"",
+    "production": "webpack --mode production --config webpack.prod.config.js --display-modules && gulp",
+    "test": "jest",
+    "watch": "webpack-dev-server  --mode development --host 0.0.0.0"
+  },
+  "version": "3.3.1"
 }

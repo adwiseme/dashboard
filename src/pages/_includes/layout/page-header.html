@@ -7,10 +7,11 @@
 
 
 {% if page.page-header-file %}
-	{% include layout/headers/{{ page.page-header-file }}.html %}
+{% include layout/headers/{{ page.page-header-file }}.html %}
 {% elsif page-header %}
 <!-- Page title -->
-<div class="page-header{% if class %} {{ class }}{% endif %} d-print-none{% if page.layout-navbar-overlap and page.layout-navbar-dark %} text-white{% endif %}">
+<div
+	class="page-header{% if class %} {{ class }}{% endif %} d-print-none{% if page.layout-navbar-overlap and page.layout-navbar-dark %} text-white{% endif %}">
 
 	<div class="row g-2 align-items-center">
 		<div class="col">
@@ -22,21 +23,38 @@
 			{% endif %}
 			<h2 class="page-title">
 				{% if icon %}
-					{% include ui/icon.html icon=icon %}
+				{% include ui/icon.html icon=icon %}
 				{% endif %}
 				{{ page-header }}
 			</h2>
 
 			{% if description %}
-				<div class="text-muted mt-1">{{ description }}</div>
+			<div class="text-muted mt-1">{{ description }}</div>
 			{% endif %}
 		</div>
 
 		{% if actions %}
-			<!-- Page title actions -->
-			<div class="col-12 col-md-auto ms-auto d-print-none">
-				{% include layout/header-actions/{{ actions }}.html %}
+		<!-- Page title actions -->
+		<div class="col-12 col-md-auto ms-auto d-print-none">
+			<div class="form-selectgroup">
+				<label class="form-selectgroup-item">
+					<input type="checkbox" name="name" value="Firma 1" class="form-selectgroup-input" checked="">
+					<span class="form-selectgroup-label">Firma 1</span>
+				</label>
+				<label class="form-selectgroup-item">
+					<input type="checkbox" name="name" value="Firma 2" class="form-selectgroup-input">
+					<span class="form-selectgroup-label">Firma 2</span>
+				</label>
+				<label class="form-selectgroup-item">
+					<input type="checkbox" name="name" value="Firma 3" class="form-selectgroup-input">
+					<span class="form-selectgroup-label">Firma 3</span>
+				</label>
+				<label class="form-selectgroup-item">
+					<input type="checkbox" name="name" value="Firma 4" class="form-selectgroup-input">
+					<span class="form-selectgroup-label">Firma 4</span>
+				</label>
 			</div>
+		</div>
 		{% endif %}
 	</div>
 </div>
